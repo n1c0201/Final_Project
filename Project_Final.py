@@ -66,7 +66,7 @@ def make_deck():
     for suit in Suit:
         for value in Card_value:
             temp_deck.append(Playing_Cards(Card_value(value), Suit(suit)))
-full_deck = Deck(temp_deck)
+
 
 #defining a text
 def text_objects(text, font):
@@ -129,6 +129,7 @@ def game_intro():
 #function for the main game
 def main_game():
     make_deck()
+    full_deck = Deck(temp_deck)
     full_deck.initial_deal(player1Cards)
     full_deck.initial_deal(player2Cards)
     counterp1 = 2
